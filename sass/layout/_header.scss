@@ -1,0 +1,16 @@
+/* Header */
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+}
+
+.container-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
