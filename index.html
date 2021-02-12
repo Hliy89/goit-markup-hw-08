@@ -18,7 +18,7 @@
   <body class="page">
     <!-- Шапка сайта -->
 
-    <header class="header">
+    <!-- <header class="header">
       <div class="container-header container">
         <nav class="navigation">
           <a href="./index.html" aria-label="Логотип ВебСтудии" lang="en" class="logo list"
@@ -55,10 +55,11 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <!-- Герой -->
+
       <section class="hero">
         <h1 class="hero-title">
           Эффективные решения <br />
@@ -67,7 +68,9 @@
 
         <button class="button primary" data-modal-open>Заказать услугу</button>
       </section>
+
       <!-- Особенности -->
+
       <section class="section-features">
         <div class="container">
           <ul class="features-list list">
@@ -96,30 +99,66 @@
           </ul>
         </div>
       </section>
+
       <!-- Чем мы занимаемся -->
+
       <section class="section-works">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="works-list list">
             <li class="item">
-              <img src="./images/img1.jpg" alt="человек печатает на клавиатуре" width="370" height="294" />
+              <picture>
+                <source
+                  srcset="./images/works-img/desktop-app-01.webp 1x, ./images/works-img/desktop-app-01@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/works-img/desktop-app-01.jpg 1x, ./images/works-img/desktop-app-01@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/img1.jpg" alt="человек печатает на клавиатуре" />
+              </picture>
+
               <div class="works-label">
                 <p class="name-label">Десктопные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/img2.jpg"
-                alt="человек перед ноутбуком со смартфоном в руках"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/works-img/mob-app-02.webp 1x, ./images/works-img/mob-app-02@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/works-img/mob-app-02.jpg 1x, ./images/mob-app-02@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./images/img2.jpg" alt="человек перед ноутбуком со смартфоном в руках" />
+              </picture>
               <div class="works-label">
                 <p class="name-label">Мобильные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img src="./images/img3.jpg" alt="человек с планшетом в руках" width="370" height="294" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/works-img/design-solutions-03.webp    1x,
+                    ./images/works-img/design-solutions-03@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/works-img/design-solutions-03.jpg 1x, ./images/design-solutions03@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./images/img3.jpg" alt="человек с планшетом в руках" />
+              </picture>
               <div class="works-label">
                 <p class="name-label">Дизайнерские решения</p>
               </div>
@@ -127,13 +166,70 @@
           </ul>
         </div>
       </section>
+
       <!-- Наша команда -->
+
       <section class="section-team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-card">
-              <img src="./images/img4.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+              <picture>
+                <!-- Desktop-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-01.webp    1x,
+                    ./images/team-img/team-desktop/team-desktop-01@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-01.jpg    1x,
+                    ./images/team-img/team-desktop/team-desktop-01@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- Tablet-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-01.webp    1x,
+                    ./images/team-img/team-tablet/team-tablet-01@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-01.jpg    1x,
+                    ./images/team-img/team-tablet/team-tablet-01@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- Mobile-image -->
+
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-01.webp    1x,
+                    ./images/team-img/team-mobile/team-mob-01@2x.webp 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-01.jpg    1x,
+                    ./images/team-img/team-mobile/team-mob-01@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/img4.jpg" alt="Игорь Демьяненко" />
+              </picture>
+
               <div class="user-info">
                 <h3 class="team-name">Игорь Демьяненко</h3>
                 <p lang="en" class="team-profession">Product Designer</p>
@@ -170,7 +266,62 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/img5.jpg" alt="Ольга Репина" width="270" height="260" />
+              <picture>
+                <!-- Desktop-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-02.webp    1x,
+                    ./images/team-img/team-desktop/team-desktop-02@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-02.jpg    1x,
+                    ./images/team-img/team-desktop/team-desktop-02@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- Tablet-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-02.webp    1x,
+                    ./images/team-img/team-tablet/team-tablet-02@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-02.jpg    1x,
+                    ./images/team-img/team-tablet/team-tablet-02@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- Mobile-image -->
+
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-02.webp    1x,
+                    ./images/team-img/team-mobile/team-mob-01@2x.webp 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-02.jpg    1x,
+                    ./images/team-img/team-mobile/team-mob-01@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/img5.jpg" alt="Ольга Репина" />
+              </picture>
+
               <div class="user-info">
                 <h3 class="team-name">Ольга Репина</h3>
                 <p lang="en" class="team-profession">Frontend Developer</p>
@@ -207,7 +358,62 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/img6.jpg" alt="Николай Тарасов" width="270" height="260" />
+              <picture>
+                <!-- Desktop-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-03.webp    1x,
+                    ./images/team-img/team-desktop/team-desktop-03@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-03.jpg    1x,
+                    ./images/team-img/team-desktop/team-desktop-03@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- Tablet-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-03.webp    1x,
+                    ./images/team-img/team-tablet/team-tablet-03@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-03.jpg    1x,
+                    ./images/team-img/team-tablet/team-tablet-03@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- Mobile-image -->
+
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-03.webp    1x,
+                    ./images/team-img/team-mobile/team-mob-03@2x.webp 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-03.jpg    1x,
+                    ./images/team-img/team-mobile/team-mob-03@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/img6.jpg" alt="Николай Тарасов" />
+              </picture>
+
               <div class="user-info">
                 <h3 class="team-name">Николай Тарасов</h3>
                 <p lang="en" class="team-profession">Marketing</p>
@@ -244,7 +450,62 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/img7.jpg" alt="Михаил Ермаков" width="270" height="260" />
+              <picture>
+                <!-- Desktop-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-04.webp    1x,
+                    ./images/team-img/team-desktop/team-desktop-04@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-desktop/team-desktop-04.jpg    1x,
+                    ./images/team-img/team-desktop/team-desktop-04@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- Tablet-image -->
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-04.webp    1x,
+                    ./images/team-img/team-tablet/team-tablet-04@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-tablet/team-tablet-04.jpg    1x,
+                    ./images/team-img/team-tablet/team-tablet-04@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- Mobile-image -->
+
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-04.webp    1x,
+                    ./images/team-img/team-mobile/team-mob-03@2x.webp 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-img/team-mobile/team-mob-04.jpg    1x,
+                    ./images/team-img/team-mobile/team-mob-03@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/img7.jpg" alt="Михаил Ермаков" />
+              </picture>
+
               <div class="user-info">
                 <h3 class="team-name">Михаил Ермаков</h3>
                 <p lang="en" class="team-profession">UI Designer</p>
@@ -283,7 +544,9 @@
           </ul>
         </div>
       </section>
+
       <!-- Постоянные клиенты -->
+
       <section>
         <div class="container-clients container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -334,8 +597,10 @@
         </div>
       </section>
     </main>
+
     <!-- Footer -->
-    <footer class="footer">
+
+    <!-- <footer class="footer">
       <div class="container-footer container">
         <div class="footer-item">
           <div class="logotype">
@@ -404,11 +669,11 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Модальное окно -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button-modal" data-modal-close>
           <svg class="close-modal-svg">
@@ -471,9 +736,10 @@
           <button type="submit" class="contact-form-btn">Отправить</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <!-- Скрипт кнопки "Заказать услугу" для модального окна -->
-    <script src="./js/modal.js"></script>
+
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
