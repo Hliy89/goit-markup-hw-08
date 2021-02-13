@@ -17,6 +17,7 @@
   </head>
   <body class="page-portfolio">
     <!-- Шапка сайта -->
+
     <header class="header">
       <div class="container-header container">
         <nav class="navigation">
@@ -35,10 +36,17 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts-list-item contacts list">
+
+        <button class="burger-btn" data-menu-open>
+          <svg class="burger-btn-icon">
+            <use href="./images/symbol-defs.svg#burger-btn"></use>
+          </svg>
+        </button>
+
+        <ul class="contacts list">
           <li class="contact-list item">
             <a href="mailto:info@devstudio.com" class="contact-list-link link">
-              <svg class="contact-list-icon" width="16px" height="12px">
+              <svg class="contact-list-icon icon-mail-tablet">
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -46,11 +54,63 @@
           </li>
           <li class="contact-list item">
             <a href="tel:+380961111111" class="contact-list-link link">
-              <svg class="contact-list-icon" width="10px" height="16px">
+              <svg class="contact-list-icon icon-tel-tablet">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
             </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu is-menu-hidden" data-menu>
+        <button type="button" class="mobile-menu-close-btn" data-menu-close>
+          <svg class="mobile-menu-close-icon">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-navigation-list list">
+          <li class="mobile-menu-navigaiton-item">
+            <a href="./index.html" class="mobile-menu-navigation-link">Студия</a>
+          </li>
+          <li class="mobile-menu-navigaiton-item">
+            <a href="./portfolio.html" class="mobile-menu-navigation-link">Портфолио</a>
+          </li>
+          <li class="mobile-menu-navigaiton-item">
+            <a href="" class="mobile-menu-navigation-link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-contacts list">
+          <li class="mobile-contacts-item">
+            <a href="tel:+380961111111" class="mobile-menu-link">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-contacts-item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-socials list">
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Instagram</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Twitter</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Facebook</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -81,7 +141,62 @@
             <li class="item">
               <a href="" class="works-link">
                 <div class="card-portfolio">
-                  <img src="./images/portfolio/img8.jpg" alt="Технокряк" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-01.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-01@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-01.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-01@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-01.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-01@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-01.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-01@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-01.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-01@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-01.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-01@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img8.jpg" alt="Технокряк" />
+                  </picture>
+
                   <div class="box-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
@@ -98,12 +213,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img
-                    src="./images/portfolio/img9.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-02.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-02@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-02.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-02@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-02.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-02@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-02.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-02@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-02.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-02@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-02.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-02@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img9.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Постер New Orlean vs Golden Star</h3>
@@ -114,7 +278,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img10.jpg" alt="Ресторан Seafood" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-03.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-03@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-03.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-03@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-03.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-03@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-03.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-03@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-03.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-03@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-03.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-03@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img10.jpg" alt="Ресторан Seafood" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Ресторан Seafood</h3>
@@ -125,7 +343,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img11.jpg" alt="Проект Prime" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-04.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-04@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-04.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-04@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-04.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-04@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-04.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-04@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-04.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-04@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-04.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-04@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img11.jpg" alt="Проект Prime" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Проект Prime</h3>
@@ -136,7 +408,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img12.jpg" alt="Проект Boxes" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-05.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-05@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-05.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-05@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-05.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-05@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-05.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-05@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-05.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-05@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-05.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-05@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img12.jpg" alt="Проект Boxes" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Проект Boxes</h3>
@@ -147,7 +473,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img13.jpg" alt="Inspiration has no Borders" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-06.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-06@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-06.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-06@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-06.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-06@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-06.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-06@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-06.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-06@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-06.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-06@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img13.jpg" alt="Inspiration has no Borders" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Inspiration has no Borders</h3>
@@ -158,7 +538,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img14.jpg" alt="Издание Limited Edition" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-07.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-07@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-07.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-07@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-07.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-07@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-07.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-07@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-07.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-07@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-07.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-07@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img14.jpg" alt="Издание Limited Edition" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Издание Limited Edition</h3>
@@ -169,7 +603,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img15.jpg" alt="Проект LAB" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-08.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-08@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-08.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-08@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-08.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-08@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-08.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-08@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-08.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-08@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-08.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-08@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img15.jpg" alt="Проект LAB" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Проект LAB</h3>
@@ -180,7 +668,61 @@
             <li class="item">
               <a href="" class="works-link">
                 <div>
-                  <img src="./images/portfolio/img16.jpg" alt="Growing Business" width="370" height="294" />
+                  <picture>
+                    <!-- Desktop-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-09.webp    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-09@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-09.jpg    1x,
+                        ./images/portfolio-img/portfolio-desktop/portfolio-desktop-09@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- Tablet-image -->
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-09.webp    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-09@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-09.jpg    1x,
+                        ./images/portfolio-img/portfolio-tablet/portfolio-tablet-09@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- Mobile-image -->
+
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-09.webp    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-09@2x.webp 2x
+                      "
+                      media="(min-width: 480px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-09.jpg    1x,
+                        ./images/portfolio-img/portfolio-mobile/portfolio-mob-09@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img src="./images/portfolio/img16.jpg" alt="Growing Business" />
+                  </picture>
                 </div>
                 <div class="works-name">
                   <h3 class="title">Growing Business</h3>
@@ -250,7 +792,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-send-box">
           <p class="send-text">Подпишитесь на рассылку</p>
           <form class="footer-send-form">
             <input type="email" name="email" placeholder="E-mail" class="footer-form-input" />

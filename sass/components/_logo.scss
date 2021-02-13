@@ -17,6 +17,12 @@
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .logo {
+    margin-right: 0;
+  }
+}
+
 /* Logo Footer */
 
 .logo-color {

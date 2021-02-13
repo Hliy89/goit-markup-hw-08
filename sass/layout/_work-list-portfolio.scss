@@ -1,16 +1,7 @@
 /* Works-list Portfolio */
 
 .works {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-
-  & .item {
-    flex-basis: calc((100% - 90px) / 3);
-    margin-left: 30px;
-    margin-top: 30px;
-  }
+  display: block;
 
   & .title {
     color: var(--primary-text-color);
@@ -26,6 +17,10 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 1.8;
+  }
+
+  & .item {
+    margin-bottom: 30px;
   }
 }
 
@@ -80,3 +75,43 @@
   padding: 63px 24px 63px 24px;
   color: #ffffff;
 }
+
+@media screen and (min-width: 767px) {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    & .item {
+      flex-basis: calc((100% - 90px) / 2);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    & .item {
+      flex-basis: calc((100% - 90px) / 3);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+
+// flex-wrap: wrap;
+//   margin-left: -30px;
+//   margin-top: -30px;
+
+//   & .item {
+//     flex-basis: calc((100% - 90px) / 3);
+//     margin-left: 30px;
+//     margin-top: 30px;
+//   }

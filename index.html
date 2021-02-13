@@ -18,7 +18,7 @@
   <body class="page">
     <!-- Шапка сайта -->
 
-    <!-- <header class="header">
+    <header class="header">
       <div class="container-header container">
         <nav class="navigation">
           <a href="./index.html" aria-label="Логотип ВебСтудии" lang="en" class="logo list"
@@ -36,10 +36,17 @@
             </li>
           </ul>
         </nav>
+
+        <button class="burger-btn" data-menu-open>
+          <svg class="burger-btn-icon">
+            <use href="./images/symbol-defs.svg#burger-btn"></use>
+          </svg>
+        </button>
+
         <ul class="contacts list">
           <li class="contact-list item">
             <a href="mailto:info@devstudio.com" class="contact-list-link link">
-              <svg class="contact-list-icon" width="16px" height="12px">
+              <svg class="contact-list-icon icon-mail-tablet">
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -47,7 +54,7 @@
           </li>
           <li class="contact-list item">
             <a href="tel:+380961111111" class="contact-list-link link">
-              <svg class="contact-list-icon" width="10px" height="16px">
+              <svg class="contact-list-icon icon-tel-tablet">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -55,7 +62,59 @@
           </li>
         </ul>
       </div>
-    </header> -->
+
+      <div class="mobile-menu is-menu-hidden" data-menu>
+        <button type="button" class="mobile-menu-close-btn" data-menu-close>
+          <svg class="mobile-menu-close-icon">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-navigation-list list">
+          <li class="mobile-menu-navigaiton-item">
+            <a href="./index.html" class="mobile-menu-navigation-link">Студия</a>
+          </li>
+          <li class="mobile-menu-navigaiton-item">
+            <a href="./portfolio.html" class="mobile-menu-navigation-link">Портфолио</a>
+          </li>
+          <li class="mobile-menu-navigaiton-item">
+            <a href="" class="mobile-menu-navigation-link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-contacts list">
+          <li class="mobile-contacts-item">
+            <a href="tel:+380961111111" class="mobile-menu-link">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-contacts-item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-socials list">
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Instagram</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Twitter</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">Facebook</a>
+          </li>
+          <li class="mobile-social-item">
+            <span class="separate-line"></span>
+          </li>
+          <li class="mobile-social-item">
+            <a href="#" class="mobile-social-link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <main>
       <!-- Герой -->
@@ -673,7 +732,7 @@
 
     <!-- Модальное окно -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button-modal" data-modal-close>
           <svg class="close-modal-svg">
@@ -736,10 +795,11 @@
           <button type="submit" class="contact-form-btn">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- Скрипт кнопки "Заказать услугу" для модального окна -->
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
