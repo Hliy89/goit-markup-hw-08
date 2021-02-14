@@ -91,9 +91,21 @@
     height: 10px;
   }
 
+  .contact-list-link:hover .icon-mail-tablet,
+  .contact-list-link:focus .icon-mail-tablet {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+
   .icon-tel-tablet {
     width: 10px;
     height: 14px;
+  }
+
+  .contact-list-link:hover .icon-tel-tablet,
+  .contact-list-link:focus .icon-tel-tablet {
+    color: var(--accent-color);
+    fill: var(--accent-color);
   }
 
   .contact-list-icon {
